@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#44CF03">
+
+    <TextView
+        android:id="@+id/label4"
+        android:text="Thay đổi thông tin"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#3506BF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/profile_name"
+        android:layout_below="@id/label4"
+        android:ems="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/profile_gender"
+        android:layout_below="@id/label4"
+        android:layout_toRightOf="@id/profile_name"
+        android:ems="5"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/profile_birth"
+        android:layout_below="@id/profile_name"
+        android:ems="6"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:background="@android:drawable/btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/profile_email"
+        android:layout_below="@id/profile_gender"
+        android:layout_toRightOf="@id/profile_birth"
+        android:ems="5"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/profile_process"
+        android:layout_below="@id/profile_birth"
+        android:ems="6"
+        android:textSize="15dp"
+        android:fontFamily="cursive"
+        android:background="@android:drawable/btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/profile_score"
+        android:layout_below="@id/profile_email"
+        android:layout_toRightOf="@id/profile_process"
+        android:ems="6"
+        android:textSize="15dp"
+        android:fontFamily="cursive"
+        android:background="@android:drawable/btn_default"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_below="@id/profile_process"
+        android:text="SAVE"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_below="@id/profile_process"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/btnSave"
+        android:layout_marginLeft="5dp"
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

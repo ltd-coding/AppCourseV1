@@ -11,13 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class MessageFragmentUser extends Fragment {
+public class TestFragmentUser extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //Code for this fragment
         Context context=getActivity();
         Toast.makeText(context, "User do something", Toast.LENGTH_SHORT).show();
-        return inflater.inflate(R.layout.fragment_message_user,container,false);
+        return inflater.inflate(R.layout.fragment_test_user,container,false);
     }
 }

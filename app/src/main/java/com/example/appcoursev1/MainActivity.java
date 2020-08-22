@@ -17,8 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_TEXT = "com.example.appcoursev1.EXTRA_TEXT";
+    public static final String EXTRA_NUMBER = "com.example.appcoursev1.EXTRA_NUMBER";
 
 
     private Button btnLogin,btnNew;
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         edtUser=(EditText)findViewById(R.id.edtUser);
 
         dbLogin = new DataBase(this);
+
 
         //catching Error
         //-------------------
@@ -85,9 +89,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                     else {
-                        Toast.makeText(MainActivity.this,"tk user "+Id,Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this,"tk user "+Id,Toast.LENGTH_SHORT).show();
                         //LoginUser();
                         Intent intent=new Intent(MainActivity.this,UserActivity.class);
+                        intent.putExtra(EXTRA_NUMBER,Id);
                         startActivity(intent);
                     }
                 }
@@ -135,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (dbLogin.getValidUser(createUser)) {
                         dbLogin.QueryData("INSERT INTO ACCOUNT VALUES(null, '" + createUser + "', '" + createPass + "')");
+                        dbLogin.QueryData("INSERT INTO PROFILE VALUES(null,'null','1000-1-1','null','example@test.com','0','0')");
                         Toast.makeText(MainActivity.this, "Tao tai khoan thanh cong", Toast.LENGTH_SHORT).show();
                         dialogNew.dismiss();
                     }
