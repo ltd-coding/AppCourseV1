@@ -1,55 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    //android:background="@drawable/roundedfrag">
 
     <TextView
         android:id="@+id/NewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New User"
-        android:textSize="30dp"
         android:layout_gravity="center"
+        android:text="New User"
+        android:textColor="#ff00"
+        android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="#ff00" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:layout_below="@+id/NewTitle"
         android:id="@+id/newUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="New User"
         android:textSize="20dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewTitle" />
+
     <EditText
-        android:layout_below="@id/newUser"
-        android:inputType="textPassword"
         android:id="@+id/newPass"
-        android:hint="New Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"/>
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUser" />
 
 
     <Button
-        android:layout_below="@+id/newPass"
-        android:id="@+id/btnCreate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:text="CREATE" />
-
-    <Button
-        android:layout_below="@id/newPass"
-        android:layout_toRightOf="@+id/btnCreate"
         android:id="@+id/btnCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundedbutton"
         android:text="CANCEL"
-        android:layout_marginLeft="20dp"/>
-</RelativeLayout>
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundedbutton"
+        android:text="CREATE"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newPass" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
