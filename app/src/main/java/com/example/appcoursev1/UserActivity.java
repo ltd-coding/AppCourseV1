@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -19,12 +20,11 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_user);
         setSupportActionBar(toolbar);
 
-
-        drawer=findViewById(R.id.drawer_layout_admin);
-        NavigationView navigationView=findViewById(R.id.nav_view);
+        drawer=findViewById(R.id.drawer_layout_user);
+        NavigationView navigationView=findViewById(R.id.nav_view_user);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this, drawer, toolbar,R.string.nav_drawer_open,R.string.nav_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -37,7 +37,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         //Navigate
         switch (item.getItemId()){
             case R.id.nav_message:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_user,
                         new MessageFragmentUser()).commit();
                 break;
 
@@ -54,4 +54,6 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+
 }

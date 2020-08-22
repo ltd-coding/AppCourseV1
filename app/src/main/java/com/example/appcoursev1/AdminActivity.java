@@ -20,12 +20,12 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_admin);
         setSupportActionBar(toolbar);
 
 
         drawer=findViewById(R.id.drawer_layout_admin);
-        NavigationView navigationView=findViewById(R.id.nav_view);
+        NavigationView navigationView=findViewById(R.id.nav_view_admin);
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this, drawer, toolbar,R.string.nav_drawer_open,R.string.nav_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -37,7 +37,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_message:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_admin,
                         new MessageFragmentAdmin()).commit();
                 break;
 
