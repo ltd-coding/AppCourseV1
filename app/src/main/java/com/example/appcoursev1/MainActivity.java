@@ -116,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.dialog_add_user, null);
         dialogNew.setContentView(layout);
+        dialogNew.getWindow().setBackgroundDrawableResource(
+                android.R.color.transparent
+        );
         //-----
         final EditText edtNewUser = (EditText) dialogNew.findViewById(R.id.newUser);
         final EditText edtNewPass = (EditText) dialogNew.findViewById(R.id.newPass);
