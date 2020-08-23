@@ -36,8 +36,6 @@ import java.util.Calendar;
 
 public class UserActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-    private static String DB_NAME = "dataBaseCourseApp.db";
-    private static String DB_PATH = "";
     private DataBase dbLogin;
     private SQLiteDatabase db;
     private TextView userName,email;
@@ -52,7 +50,12 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
         ///setup
         //-----------------------
-        dbLogin = new DataBase(this);  //shit goes wrong
+        dbLogin = new DataBase(this);
+        try {
+            dbLogin.updateDataBase();
+        } catch (IOException mIOException) {
+            throw new Error("UnableToUpdateDatabase");
+        }
 
 
         try {
@@ -60,6 +63,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+
 
         //Get Data from profile
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0); //id user
@@ -154,6 +158,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         final String[] date = new String[1];
 
         //Show data
+        c=dbLogin.GetData("SELECT * FROM PROFILE WHERE id= '"+ data +"'");
         c.moveToFirst();
         profileName.setText(c.getString(1));
         profileBirth.setText(c.getString(2));
@@ -228,7 +233,6 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         //----------------------
         dialogEdit.show();
     }
-
 
 
 
