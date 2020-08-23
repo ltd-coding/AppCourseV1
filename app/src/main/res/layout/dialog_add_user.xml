@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#00FFFFFF">
+    android:background="#0066CCFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="278dp"
@@ -46,6 +46,7 @@
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginTop="44dp"
+            android:maxLines="1"
             android:hint="New User"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +59,7 @@
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginTop="8dp"
+            android:maxLines="1"
             android:hint="New Password"
             android:inputType="textPassword"
             android:textSize="20dp"
