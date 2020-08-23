@@ -1,101 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#44CF03">
+    android:layout_gravity="center"
+    android:background="#0044CF03">
 
-    <TextView
-        android:id="@+id/label4"
-        android:text="Thay đổi thông tin"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="#3506BF"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="277dp"
+        android:layout_height="451dp"
+        android:background="@drawable/roundedfrag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:layout_marginTop="10dp"
-        android:id="@+id/profile_name"
-        android:layout_below="@id/label4"
-        android:ems="6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/profile_birth"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:ems="6"
+            android:fontFamily="cursive"
+            android:gravity="bottom"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
 
-    <EditText
-        android:id="@+id/profile_gender"
-        android:layout_below="@id/label4"
-        android:layout_toRightOf="@id/profile_name"
-        android:ems="5"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/profile_process"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="6"
+            android:fontFamily="cursive"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/profile_birth"
-        android:layout_below="@id/profile_name"
-        android:ems="6"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:fontFamily="cursive"
-        android:background="@android:drawable/btn_default"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/profile_score"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:ems="6"
+            android:fontFamily="cursive"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/profile_gender"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:ems="5"
+            android:maxLines="1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/roundedtop" />
 
 
-    <EditText
-        android:id="@+id/profile_email"
-        android:layout_below="@id/profile_gender"
-        android:layout_toRightOf="@id/profile_birth"
-        android:ems="5"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:text="Tên:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22000003" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="59dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:text="Email:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="89dp"
+            android:layout_height="45dp"
+            android:gravity="center|start"
+            android:text="Giới tính:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="center|start"
+            android:text="Ngày sinh:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:text="Quá trình:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_email" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:text="Điểm:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/profile_name"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:ems="6"
+            android:maxLines="1"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/label4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Thay đổi thông tin"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.04000002" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:text="SAVE"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/roundedbutton"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+            app:layout_constraintStart_toEndOf="@+id/btnSave"
+            app:layout_constraintTop_toTopOf="@+id/btnSave" />
+
+        <EditText
+            android:id="@+id/profile_email"
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:ems="5"
+            android:maxLines="1"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/profile_process"
-        android:layout_below="@id/profile_birth"
-        android:ems="6"
-        android:textSize="15dp"
-        android:fontFamily="cursive"
-        android:background="@android:drawable/btn_default"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-
-    <TextView
-        android:id="@+id/profile_score"
-        android:layout_below="@id/profile_email"
-        android:layout_toRightOf="@id/profile_process"
-        android:ems="6"
-        android:textSize="15dp"
-        android:fontFamily="cursive"
-        android:background="@android:drawable/btn_default"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_below="@id/profile_process"
-        android:text="SAVE"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btncancel"
-        android:layout_below="@id/profile_process"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/btnSave"
-        android:layout_marginLeft="5dp"
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

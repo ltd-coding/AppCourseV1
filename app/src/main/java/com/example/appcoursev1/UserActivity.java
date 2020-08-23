@@ -16,6 +16,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -141,6 +142,9 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         LayoutInflater inflater=getLayoutInflater();
         View layout=inflater.inflate(R.layout.dialog_edit_profile_user,null);
         dialogEdit.setContentView(layout);
+        dialogEdit.getWindow().setBackgroundDrawableResource(
+                android.R.color.transparent
+        );
 
         //---------------------
         final EditText profileName=(EditText) dialogEdit.findViewById(R.id.profile_name);
@@ -152,6 +156,10 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         Button btnSave=(Button) dialogEdit.findViewById(R.id.btnSave);
         Button btnCancel=(Button) dialogEdit.findViewById(R.id.btncancel);
         final String[] date = new String[1];
+
+        profileBirth.setPaintFlags(profileBirth.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        profileProcess.setPaintFlags(profileProcess.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        profileScore.setPaintFlags(profileScore.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         //Show data
         c.moveToFirst();
