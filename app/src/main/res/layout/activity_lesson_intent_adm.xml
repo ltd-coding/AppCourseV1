@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    android:orientation="vertical"
+    tools:context=".LessonIntent_adm">
+
+    <ImageButton
+        android:id="@+id/lesson_exit_adm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_exit" />
+
+    <EditText
+        android:id="@+id/lessonName_adm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/lessonPos_adm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pos:"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/lessonNeg_adm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Neg:"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/lessonQues_adm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question:"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/previousL_adm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/nextL_adm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/save_adm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

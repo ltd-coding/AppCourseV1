@@ -244,7 +244,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-    public void getExitCmd() {
+    private void getExitCmd() {
         AlertDialog.Builder dialogXoa=new AlertDialog.Builder(this);
         dialogXoa.setMessage("Bạn có chắc chắn muốn đăng xuất không ??");
         dialogXoa.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
