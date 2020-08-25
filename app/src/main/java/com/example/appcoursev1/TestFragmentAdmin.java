@@ -38,20 +38,20 @@ public class TestFragmentAdmin extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        /*
+
         switch (v.getId()) {
-            case R.id.test1:
-                intent=new Intent(context,TestIntent.class);
+            case R.id.test1_adm:
+                intent=new Intent(context,TestIntent_adm.class);
                 intent.putExtra(MainActivity.EXTRA_NUMBER,0);
                 startActivity(intent);
                 break;
-            case R.id.test2:
-                intent=new Intent(context,TestIntent.class);
+            case R.id.test2_adm:
+                intent=new Intent(context,TestIntent_adm.class);
                 intent.putExtra(MainActivity.EXTRA_NUMBER,5);
                 startActivity(intent);
                 break;
         }
-         */
+
 
     }
 }

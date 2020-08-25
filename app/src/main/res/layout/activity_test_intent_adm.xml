@@ -8,42 +8,106 @@
     android:background="@android:color/holo_blue_bright"
     android:orientation="vertical">
 
-    <TextView
+    <EditText
         android:id="@+id/question_adm"
         android:textSize="30sp"
         android:text="Question:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/ansA"
-        android:text="A"
-        android:textSize="30dp"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/ansB"
-        android:text="B"
-        android:textSize="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Answer Key:"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/ansKey"
+            android:text="right answer"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/ansC"
-        android:text="C"
-        android:textSize="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="second choice:"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/ansDum1"
+            android:text="wrong answer"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/ansD"
-        android:text="D"
-        android:textSize="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="third choice:"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/ansDum2"
+            android:text="wrong answer"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="fourth choice:"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/ansDum3"
+            android:text="wrong answer"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/nextQuestion_adm"
+        android:text="Next"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:layout_marginTop="30dp"
-        android:id="@+id/nextQuestion"
-        android:text="Next"
+        android:id="@+id/save_ques_adm"
+        android:text="Save"
         android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
