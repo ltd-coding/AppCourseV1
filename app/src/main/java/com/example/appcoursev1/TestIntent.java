@@ -129,8 +129,8 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
                         for (int i=0;i<4;i++) {
                             btn[i].setEnabled(true);
                         }
-                        btn[choose].setBackgroundResource(android.R.drawable.btn_default);
-                        btn[key].setBackgroundResource(android.R.drawable.btn_default);
+                        btn[choose].setBackgroundResource(R.drawable.lightblu_rb);
+                        btn[key].setBackgroundResource(R.drawable.lightblu_rb);
 
                     }
                     c.moveToNext();
