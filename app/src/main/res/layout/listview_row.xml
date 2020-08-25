@@ -20,40 +20,65 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/linearLayout15">
 
         <TextView
             android:id="@+id/UserName_id"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
 
         <TextView
             android:id="@+id/UserName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="19dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
 
         <TextView
             android:id="@+id/UserEmail"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="39dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
 
         <TextView
             android:id="@+id/UserBirth"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="58dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
         <TextView
             android:id="@+id/UserScore"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="78dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
         <TextView
             android:id="@+id/UserProcess"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_editor_absoluteY="97dp"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_conversion_absoluteWidth="261dp" />
     </LinearLayout>
 </LinearLayout>

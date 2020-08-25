@@ -1,110 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical"
     tools:context=".TestIntent_adm">
 
     <EditText
         android:id="@+id/question_adm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:text="Question:"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_adm">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="178dp"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
             android:text="AnsKey:"
-            />
-        <EditText
+            android:textSize="30dp" />
+
+        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/ansKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="right Answer"
-            android:id="@+id/ansKey"/>
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout10"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
             android:text="Second choice:"
-            />
-        <EditText
+            android:textSize="30dp" />
+
+        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/ansDum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="wrong Answer"
-            android:id="@+id/ansDum1"/>
+            android:textSize="30dp" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout11"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
             android:text="Third choice:"
-            />
-        <EditText
+            android:textSize="30dp" />
+
+        <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/ansDum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="wrong Answer"
-            android:id="@+id/ansDum2"/>
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fourth choice:"
+            android:textSize="30dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/ansDum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wrong Answer"
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9">
+
+        <Button
+            android:id="@+id/nextQuestion_adm"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:background="@drawable/roundedbutton"
+            android:text="Next"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <Space
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="Fourth choice:"
-            />
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="wrong Answer"
-            android:id="@+id/ansDum3"/>
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/save_ques_adm"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:background="@drawable/roundedbutton"
+            android:text="save"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/nextQuestion_adm"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Next"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp" />
-    <Button
-        android:id="@+id/save_ques_adm"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:background="@drawable/roundedbutton"
-        android:text="save"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
