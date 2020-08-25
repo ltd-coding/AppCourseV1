@@ -9,31 +9,6 @@
     android:orientation="vertical"
     tools:context=".LessonIntent_adm">
 
-    <EditText
-        android:id="@+id/lessonName_adm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Name:"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson_exit_adm"
-        tools:layout_conversion_absoluteHeight="61dp"
-        tools:layout_conversion_absoluteWidth="411dp" />
-
-    <EditText
-        android:id="@+id/lessonQues_adm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Question:"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonNeg_adm"
-        tools:layout_conversion_absoluteHeight="61dp"
-        tools:layout_conversion_absoluteWidth="411dp" />
-
     <ImageButton
         android:id="@+id/lesson_exit_adm"
         android:layout_width="50dp"
@@ -50,6 +25,18 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_conversion_absoluteHeight="43dp"
         tools:layout_conversion_absoluteWidth="48dp" />
+
+    <EditText
+        android:id="@+id/lessonName_adm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson_exit_adm"
+        tools:layout_conversion_absoluteHeight="61dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 
     <EditText
         android:id="@+id/lessonPos_adm"
@@ -73,6 +60,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lessonPos_adm"
+        tools:layout_conversion_absoluteHeight="61dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <EditText
+        android:id="@+id/lessonQues_adm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Question:"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessonNeg_adm"
         tools:layout_conversion_absoluteHeight="61dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
