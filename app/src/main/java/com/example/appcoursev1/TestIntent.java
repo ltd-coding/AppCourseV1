@@ -131,6 +131,8 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
                         }
                         btn[choose].setBackgroundResource(R.drawable.lightblu_rb);
                         btn[key].setBackgroundResource(R.drawable.lightblu_rb);
+                        //btn[choose].setBackgroundResource(android.R.drawable.btn_default);
+                        //btn[key].setBackgroundResource(android.R.drawable.btn_default);
 
                     }
                     c.moveToNext();
@@ -147,6 +149,8 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
             }
             btn[choose].setBackgroundResource(R.drawable.rest_rb);
             btn[key].setBackgroundResource(R.drawable.dellow_rb);
+            //btn[choose].setBackgroundColor(Color.red());
+            //btn[key].setBackgroundColor(Color.green());
             for (int i=0;i<4;i++) {
                 btn[i].setEnabled(false);
             }
