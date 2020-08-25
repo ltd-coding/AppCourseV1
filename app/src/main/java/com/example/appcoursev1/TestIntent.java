@@ -145,8 +145,8 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
             if (choose == key ) {
                 score++;
             }
-            btn[choose].setBackgroundColor(Color.RED);
-            btn[key].setBackgroundColor(Color.GREEN);
+            btn[choose].setBackgroundResource(R.drawable.rest_rb);
+            btn[key].setBackgroundResource(R.drawable.dellow_rb);
             for (int i=0;i<4;i++) {
                 btn[i].setEnabled(false);
             }

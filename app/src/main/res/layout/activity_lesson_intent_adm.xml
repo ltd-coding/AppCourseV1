@@ -17,7 +17,7 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonNeg_adm"
+        app:layout_constraintTop_toBottomOf="@+id/lesson_exit_adm"
         tools:layout_conversion_absoluteHeight="61dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -28,8 +28,9 @@
         android:text="Question:"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonName_adm"
+        app:layout_constraintTop_toBottomOf="@+id/lessonNeg_adm"
         tools:layout_conversion_absoluteHeight="61dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -58,7 +59,7 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lessonQues_adm"
+        app:layout_constraintTop_toBottomOf="@+id/lessonName_adm"
         tools:layout_conversion_absoluteHeight="61dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -68,15 +69,15 @@
         android:layout_height="wrap_content"
         android:text="Neg:"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson_exit_adm"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/lessonPos_adm"
         tools:layout_conversion_absoluteHeight="61dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
