@@ -25,6 +25,7 @@ public class ProfileFragmentAdmin extends Fragment {
     private Context context;
     private ListView listView;
     private Cursor c;
+    //for listview
     ArrayList<ProfileUser> list;
     AdapterUserProfile adapter;
 
@@ -62,6 +63,7 @@ public class ProfileFragmentAdmin extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         c=dbLogin.GetData("SELECT * FROM PROFILE");
+        //clear old list, reload whole new data
         list.clear();
         for (int i=1;i<c.getCount();i++) {
             c.moveToPosition(i);

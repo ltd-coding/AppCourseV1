@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+
+//adapter for list view
 public class AdapterUserProfile extends BaseAdapter {
     Context context;
     ArrayList<ProfileUser> list;
@@ -48,15 +50,17 @@ public class AdapterUserProfile extends BaseAdapter {
         TextView txtScore=(TextView) row.findViewById(R.id.UserScore);
         TextView txtProcess=(TextView) row.findViewById(R.id.UserProcess);
 
+        //set data
         imgAvatar.setImageResource(R.drawable.ic_launcher_foreground);//avatar temp,change if needed
         ProfileUser profileUser=list.get(position);
-        txtId.setText(profileUser.idUser + "");
+        txtId.setText(profileUser.idUser+"");
         txtTen.setText(profileUser.hoTen);
         txtEmail.setText(profileUser.eMail);
         txtBirth.setText(profileUser.ngaySinh);
         txtScore.setText(profileUser.score);
         txtProcess.setText(profileUser.process);
 
+        //return listview_row.xml
         return row;
     }
 }

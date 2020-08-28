@@ -25,7 +25,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         Toolbar toolbar = findViewById(R.id.toolbar_admin);
         setSupportActionBar(toolbar);
 
-
+        //setup for drawer
         drawer=findViewById(R.id.drawer_layout_admin);
         NavigationView navigationView=findViewById(R.id.nav_view_admin);
         navigationView.setNavigationItemSelectedListener(this);

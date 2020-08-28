@@ -13,14 +13,15 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DataBase extends SQLiteOpenHelper {
-    private static String DB_NAME = "dataBaseCourseApp.db";
-    private static String DB_PATH = "";
+    private static String DB_NAME = "dataBaseCourseApp.db"; //database file name
+    private static String DB_PATH = ""; //default data path data/data, change if needed
     private static final int DB_VERSION = 1;
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
 
+    //construtor
     public DataBase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17)
@@ -34,7 +35,7 @@ public class DataBase extends SQLiteOpenHelper {
         this.getReadableDatabase();
     }
 
-    //Truy vấn dataBase
+    //Truy vấn dataBase, thay cho SqliteDatabase.rawQuery
     public void QueryData(String sql){
         SQLiteDatabase database=getWritableDatabase();
         database.execSQL(sql);
@@ -74,6 +75,7 @@ public class DataBase extends SQLiteOpenHelper {
         }
     }
 
+    //copy database from default file assets
     private void copyDBFile() throws IOException {
         InputStream mInput = mContext.getAssets().open(DB_NAME);
         //InputStream mInput = mContext.getResources().openRawResource(R.raw.info);
@@ -111,6 +113,7 @@ public class DataBase extends SQLiteOpenHelper {
             mNeedUpdate = true;
     }
 
+    //get password of username
     public String getSingleEntry(String userName)
     {
         SQLiteDatabase db=this.getReadableDatabase();
@@ -126,6 +129,7 @@ public class DataBase extends SQLiteOpenHelper {
         return password;
     }
 
+    //get id of username
     public Integer getIdEntry(String userName)
     {
         SQLiteDatabase db=this.getReadableDatabase();
@@ -141,6 +145,7 @@ public class DataBase extends SQLiteOpenHelper {
         return ID;
     }
 
+    //validate user
     public boolean getValidUser(String userName)
     {
         SQLiteDatabase db=this.getReadableDatabase();

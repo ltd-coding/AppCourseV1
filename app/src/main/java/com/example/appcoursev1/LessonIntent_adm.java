@@ -132,7 +132,9 @@ public class LessonIntent_adm extends AppCompatActivity implements View.OnClickL
         newData[3]=ques.getText().toString();
 
         dbLogin.QueryData("UPDATE LESSON SET NAME='"+ newData[0] +"',POS='"+ newData[1] +"',NEG='"+ newData[2] +"',QUES='"+ newData[3] +"' WHERE id ='"+ id +"' ");
+        //renew data
         c=dbLogin.GetData("SELECT * FROM LESSON LIMIT '"+ data +"','"+ numLesson +"'");
+        //go back to current position
         c.moveToPosition(currentID);
     }
 }

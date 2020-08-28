@@ -24,7 +24,7 @@ import java.util.Random;
 public class TestIntent extends AppCompatActivity implements View.OnClickListener {
     private DataBase dbLogin;
     private SQLiteDatabase db;
-    private int data,key,choose,score; //data = id of question, key = right ans, choose =btn clickec
+    private int data,key,choose,score; //data = id of question, key = right ans, choose =btn clicked
     private Cursor c;
     //private Button btnA,btnB,btnC,btnD;
     private Button btnNext;
@@ -32,8 +32,8 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
 
 
     private TextView questionTxt,txtScore;
-    private boolean clicked;
-    private int maxQuestion=5;
+    private boolean clicked; // clicked = alr chosen an answer, change color of button
+    private int maxQuestion=5;//question per test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

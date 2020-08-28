@@ -40,6 +40,7 @@ public class LessonFragmentUser extends Fragment implements View.OnClickListener
         }
     }
 
+    //calling LessonIntent with extra_Number for id
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

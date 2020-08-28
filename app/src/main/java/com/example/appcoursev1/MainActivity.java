@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
+    //for putExtra Intent
     public static final String EXTRA_TEXT = "com.example.appcoursev1.EXTRA_TEXT";
     public static final String EXTRA_NUMBER = "com.example.appcoursev1.EXTRA_NUMBER";
 
@@ -76,10 +77,11 @@ public class MainActivity extends AppCompatActivity {
     private void onClick() { btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            //check length
             if (edtPass.getText().length()!=0 && edtUser.getText().length()!=0){
                 String loginPass=edtPass.getText().toString();
                 String loginUser=edtUser.getText().toString();
-                String passConfirm=dbLogin.getSingleEntry(loginUser); //confirm user + pass
+                String passConfirm=dbLogin.getSingleEntry(loginUser); //confirm user,taking pass
                 if (loginPass.equals(passConfirm)) {
                     Integer Id=dbLogin.getIdEntry(loginUser); //confirm id
                     if (Id==1) {
@@ -138,8 +140,10 @@ public class MainActivity extends AppCompatActivity {
                 if ((createPass.equals("")) || (createUser.equals(""))) {
                     Toast.makeText(MainActivity.this, "Vui long nhap day du", Toast.LENGTH_SHORT).show();
                 } else {
+                    //validate username
                     if (dbLogin.getValidUser(createUser)) {
                         dbLogin.QueryData("INSERT INTO ACCOUNT VALUES(null, '" + createUser + "', '" + createPass + "')");
+                        //default data
                         dbLogin.QueryData("INSERT INTO PROFILE VALUES(null,'null','1000-1-1','null','example@test.com','0','0')");
                         Toast.makeText(MainActivity.this, "Tao tai khoan thanh cong", Toast.LENGTH_SHORT).show();
                         dialogNew.dismiss();

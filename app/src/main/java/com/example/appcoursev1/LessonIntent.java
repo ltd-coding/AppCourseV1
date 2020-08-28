@@ -54,6 +54,7 @@ public class LessonIntent extends AppCompatActivity implements View.OnClickListe
             throw mSQLException;
         }
         numLesson=3;
+        //getData
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0);
         c=dbLogin.GetData("SELECT * FROM LESSON LIMIT '"+ data +"','"+ numLesson +"'");
         c.moveToFirst();

@@ -262,6 +262,8 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
         dialogXoa.show();
 
     }
+
+    //close drawer if drawer is open, else exit
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)){

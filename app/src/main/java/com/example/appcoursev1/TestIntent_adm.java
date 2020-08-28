@@ -120,8 +120,9 @@ public class TestIntent_adm extends AppCompatActivity implements View.OnClickLis
         newData[3]=ans[3].getText().toString();
 
         dbLogin.QueryData("UPDATE TESTING SET QUESTION='"+ newQues +"',ANSKEY='"+ newData[0] +"',ANSDUM1='"+ newData[1] +"',ANSDUM2='"+ newData[2] +"',ANSDUM3='"+ newData[3] +"' WHERE id ='"+ currentID +"'");
-
+        //reload new data
         c=dbLogin.GetData("SELECT * FROM TESTING");
+        //id in profile start from 1, cursor start with 0
         c.moveToPosition(currentID-1);
     }
 }
