@@ -43,6 +43,7 @@ public class LessonFragmentAdmin extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            //calling LessonIntent_adm with diff id
             case R.id.lesson1_adm:
                 intent=new Intent(context,LessonIntent_adm.class);
                 intent.putExtra(MainActivity.EXTRA_NUMBER,0);

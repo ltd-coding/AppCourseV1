@@ -76,6 +76,7 @@ public class ProfileFragmentAdmin extends Fragment {
             String txtProcess=c.getString(6);
             list.add(new ProfileUser(id,txtTen,txtNgay,txtGioi,txtEmail,txtScore,txtProcess));
         }
+        //reload new data
         adapter.notifyDataSetChanged();
     }
 }

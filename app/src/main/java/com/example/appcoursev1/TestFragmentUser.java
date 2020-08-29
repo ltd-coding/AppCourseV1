@@ -45,7 +45,7 @@ public class TestFragmentUser extends Fragment implements View.OnClickListener {
         btnTest2.setOnClickListener(this);
     }
 
-
+    //calling TestIntent class with extra_number as id
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

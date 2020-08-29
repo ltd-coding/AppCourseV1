@@ -61,6 +61,7 @@ public class TestIntent extends AppCompatActivity implements View.OnClickListene
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+        //loading data to cursor c
         c=dbLogin.GetData("SELECT * FROM TESTING");
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0);
         //data equal id of question in sql, max question = max question + id -1 <=> id number of last question of this specific test

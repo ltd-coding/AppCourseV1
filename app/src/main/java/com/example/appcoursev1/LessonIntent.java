@@ -56,6 +56,7 @@ public class LessonIntent extends AppCompatActivity implements View.OnClickListe
         numLesson=3;
         //getData
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0);
+        //from data, taking numLesson row
         c=dbLogin.GetData("SELECT * FROM LESSON LIMIT '"+ data +"','"+ numLesson +"'");
         c.moveToFirst();
 
@@ -73,7 +74,7 @@ public class LessonIntent extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
+    //navigate cursor
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

@@ -21,7 +21,7 @@ public class DataBase extends SQLiteOpenHelper {
     private final Context mContext;
     private boolean mNeedUpdate = false;
 
-    //construtor
+    //constructor
     public DataBase(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17)
@@ -35,12 +35,13 @@ public class DataBase extends SQLiteOpenHelper {
         this.getReadableDatabase();
     }
 
-    //Truy vấn dataBase, thay cho SqliteDatabase.rawQuery
+    //SqliteDatabase.rawQuery ("Select ",null);
     public void QueryData(String sql){
         SQLiteDatabase database=getWritableDatabase();
         database.execSQL(sql);
     }
-    //truy vấn có trả kq: SELECT
+
+    // SqliteDatabase.rawQuery ("Update,Insert ",null);
     public Cursor GetData(String  sql){
         SQLiteDatabase database=getReadableDatabase();
         return database.rawQuery(sql, null);

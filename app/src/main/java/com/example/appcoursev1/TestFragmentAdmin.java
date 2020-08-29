@@ -40,6 +40,7 @@ public class TestFragmentAdmin extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
 
         switch (v.getId()) {
+            //calling TestIntent_adm with diff id
             case R.id.test1_adm:
                 intent=new Intent(context,TestIntent_adm.class);
                 intent.putExtra(MainActivity.EXTRA_NUMBER,0);

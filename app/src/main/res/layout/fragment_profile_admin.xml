@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#66ccff">
 
+    //showing multiple row layout - listview_row.xml
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

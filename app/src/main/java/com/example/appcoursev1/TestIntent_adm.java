@@ -58,6 +58,7 @@ public class TestIntent_adm extends AppCompatActivity implements View.OnClickLis
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+        //load data
         c=dbLogin.GetData("SELECT * FROM TESTING");
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0);
         //data equal id of question in sql, max question = max question + id -1 <=> id number of last question of this specific test

@@ -22,7 +22,7 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
+        //fragment container
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,6 +30,7 @@
         </FrameLayout>
     </LinearLayout>
 
+    //menu + header for drawer
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view_user"
         android:layout_width="wrap_content"

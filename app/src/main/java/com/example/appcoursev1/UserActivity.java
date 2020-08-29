@@ -98,6 +98,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    //load profile user
     private void setHeaderValue() {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_user);
         View headerView = navigationView.getHeaderView(0);
@@ -180,7 +181,7 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-        //--------
+        //--------Date Picker
         DatePickerDialog.OnDateSetListener dateSetListener;
         profileBirth.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -272,9 +273,5 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
             getExitCmd();
         }
     }
-
-
-
-
 
 }

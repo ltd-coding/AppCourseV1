@@ -66,6 +66,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         return true;
     }
 
+    //change back pressed
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)){
@@ -75,13 +76,14 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         }
     }
 
+    //dialog confirm
     private void getExitCmd() {
         AlertDialog.Builder dialogXoa=new AlertDialog.Builder(this);
         dialogXoa.setMessage("Bạn có chắc chắn muốn đăng xuất không ??");
         dialogXoa.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                finish();
+                finish(); // end of intent
             }
         });
         dialogXoa.setNegativeButton("No", new DialogInterface.OnClickListener() {

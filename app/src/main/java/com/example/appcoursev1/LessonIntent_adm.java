@@ -56,6 +56,7 @@ public class LessonIntent_adm extends AppCompatActivity implements View.OnClickL
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+        //loading data
         numLesson=3;
         data=getIntent().getIntExtra(MainActivity.EXTRA_NUMBER,0);
         c=dbLogin.GetData("SELECT * FROM LESSON LIMIT '"+ data +"','"+ numLesson +"'");

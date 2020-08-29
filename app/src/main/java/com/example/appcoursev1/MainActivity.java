@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
         */
 
-        //onCLick
+        //onCLick event
         onClick();
     }
 
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     });
+        //new User
         btnNew.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
